@@ -36,14 +36,14 @@ main = hakyll $ do
     route idRoute
     compile $ do
       let archiveCtx =
-        field "posts" (\_ -> postList recentFirst) `mappend`
-        constField "title" "Archives"              `mappend`
-        defaultContext
+            field "posts" (\_ -> postList recentFirst) `mappend`
+            constField "title" "Archives"              `mappend`
+            defaultContext
 
-    makeItem ""
-      >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-      >>= loadAndApplyTemplate "templates/default.html" archiveCtx
-      >>= relativizeUrls
+      makeItem ""
+        >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
+        >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+        >>= relativizeUrls
 
 
   match "index.html" $ do
