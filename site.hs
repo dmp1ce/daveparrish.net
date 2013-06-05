@@ -7,6 +7,10 @@ import           Hakyll
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
+  match "drupal_archive/**" $ do
+    route   idRoute
+    compile copyFileCompiler
+
   match "images/*" $ do
     route   idRoute
     compile copyFileCompiler
