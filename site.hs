@@ -7,8 +7,10 @@ import Debug.Trace (traceShow, trace)
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
-  match "drupal_archive/**" $ do
-    route   idRoute
+  -- Route to the old Drupal archive site
+  match "drupal_archive/webpagedeveloper.me/**" $ do
+    route   (gsubRoute "^drupal_archive/webpagedeveloper.me/"
+              (const "drupal_archive/"))
     compile copyFileCompiler
 
   match "images/*" $ do
