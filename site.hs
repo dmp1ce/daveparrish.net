@@ -66,11 +66,7 @@ main = hakyll $ do
 postCtx :: Context String
 postCtx =
   dateField "date" "%B %e, %Y - %r" `mappend`
-  defaultContext
-
-postCtxShort :: Context String
-postCtxShort =
-  dateField "date" "%B %e, %Y" `mappend`
+  dateField "shortdate" "%B %e, %Y" `mappend`
   defaultContext
 
 --------------------------------------------------------------------------------
@@ -78,5 +74,5 @@ postList :: ([Item String] -> Compiler [Item String]) -> Compiler String
 postList sortFilter = do
   posts   <- sortFilter =<< loadAll "posts/*"
   itemTpl <- loadBody "templates/post-item.html"
-  list    <- applyTemplateList itemTpl postCtxShort posts
+  list    <- applyTemplateList itemTpl postCtx posts
   return list
