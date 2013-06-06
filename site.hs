@@ -1,8 +1,8 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
-import           Hakyll
-
+import Data.Monoid (mappend)
+import Hakyll
+import Debug.Trace (traceShow, trace)
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -63,14 +63,18 @@ main = hakyll $ do
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
-  dateField "date" "%B %e, %Y" `mappend`
+  dateField "date" "%B %e, %Y - %r" `mappend`
   defaultContext
 
+postCtxShort :: Context String
+postCtxShort =
+  dateField "date" "%B %e, %Y" `mappend`
+  defaultContext
 
 --------------------------------------------------------------------------------
 postList :: ([Item String] -> Compiler [Item String]) -> Compiler String
 postList sortFilter = do
   posts   <- sortFilter =<< loadAll "posts/*"
   itemTpl <- loadBody "templates/post-item.html"
-  list    <- applyTemplateList itemTpl postCtx posts
+  list    <- applyTemplateList itemTpl postCtxShort posts
   return list
