@@ -1,5 +1,6 @@
 ---
 title: New Blog
+date: 2013-06-05 14:35:24
 ---
 
 This is my first post for my new blog created using Hakyll.  We'll see how it goes!
