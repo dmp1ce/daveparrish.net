@@ -2,15 +2,19 @@
 {-# LANGUAGE OverloadedStrings #-}
 import Data.Monoid (mappend)
 import Hakyll
-import Debug.Trace (traceShow, trace)
 
 --------------------------------------------------------------------------------
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith myConfiguration $ do
   -- Route to the old Drupal archive site
   match "drupal_archive/webpagedeveloper.me/**" $ do
     route   (gsubRoute "^drupal_archive/webpagedeveloper.me/"
               (const "drupal_archive/"))
+    compile copyFileCompiler
+
+  -- Copy .htaccess file for redirecting old urls to new
+  match ".htaccess" $ do
+    route idRoute
     compile copyFileCompiler
 
   match "images/*" $ do
@@ -61,7 +65,6 @@ main = hakyll $ do
 
   match "templates/*" $ compile templateCompiler
 
-
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
@@ -76,3 +79,10 @@ postList sortFilter = do
   itemTpl <- loadBody "templates/post-item.html"
   list    <- applyTemplateList itemTpl postCtx posts
   return list
+
+--------------------------------------------------------------------------------
+myConfiguration :: Configuration
+myConfiguration = defaultConfiguration {ignoreFile = ignoreFile'}
+  where
+    ignoreFile' ".htaccess" = False
+    ignoreFile' path        = ignoreFile defaultConfiguration path
