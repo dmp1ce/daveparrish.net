@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Quick tips on configuring a static IP wireless bridge | Dave Parrish</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link type="text/css" rel="stylesheet" media="all" href="../sites/webpagedeveloper.me/files/css/css_100687e636434ff5883b7a0da26e427f.css" />
+  <script type="text/javascript" src="../sites/webpagedeveloper.me/files/js/js_44b28fe23efd28d71ff2a59da30fa2ca.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "googleanalytics": { "trackOutgoing": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" }, "lightbox2": { "rtl": 0, "file_path": "/(\\w\\w/)sites/webpagedeveloper.me/files", "default_image": "/sites/all/modules/lightbox2/images/brokenimage.jpg", "border_size": 10, "font_color": "000", "box_color": "fff", "top_position": "", "overlay_opacity": "0.8", "overlay_color": "000", "disable_close_click": 1, "resize_sequence": 0, "resize_speed": 400, "fade_in_speed": 400, "slide_down_speed": 600, "use_alt_layout": 0, "disable_resize": 0, "disable_zoom": 0, "force_show_nav": 0, "show_caption": true, "loop_items": 0, "node_link_text": "", "node_link_target": 0, "image_count": "Image !current of !total", "video_count": "Video !current of !total", "page_count": "Page !current of !total", "lite_press_x_close": "press \x3ca href=\"#\" onclick=\"hideLightbox(); return FALSE;\"\x3e\x3ckbd\x3ex\x3c/kbd\x3e\x3c/a\x3e to close", "download_link_text": "", "enable_login": false, "enable_contact": false, "keys_close": "c x 27", "keys_previous": "p 37", "keys_next": "n 39", "keys_zoom": "z", "keys_play_pause": "32", "display_image_size": "original", "image_node_sizes": "()", "trigger_lightbox_classes": "", "trigger_lightbox_group_classes": "", "trigger_slideshow_classes": "", "trigger_lightframe_classes": "", "trigger_lightframe_group_classes": "", "custom_class_handler": 0, "custom_trigger_classes": "", "disable_for_gallery_lists": true, "disable_for_acidfree_gallery_lists": true, "enable_acidfree_videos": true, "slideshow_interval": 5000, "slideshow_automatic_start": true, "slideshow_automatic_exit": true, "show_play_pause": true, "pause_on_next_click": false, "pause_on_previous_click": true, "loop_slides": false, "iframe_width": 600, "iframe_height": 400, "iframe_border": 1, "enable_video": 0 } });
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.google_analytics_uacct = "UA-9522659-1";
+//--><!]]>
+</script>
+  <!--[if lt IE 7]>
+    <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/interactive_media_modified/fix-ie.css" />  <![endif]-->
+  <script type="text/javascript"> </script>
+</head>
+
+<body class="not-front not-logged-in page-node node-type-blog no-sidebars">
+<div id="wrapper"><!-- begin wrapper -->
+<div id="container" class="clear-block"><!-- begin container -->
+  <div id="header"><!-- begin header -->
+        <div id="slogan-floater"><!-- begin slogan-floater -->
+      <h1 class='site-name'><a href="../index.html" title="Dave Parrish">Dave Parrish</a></h1>      <div class='site-slogan'>Freelance web page developer</div>    </div><!-- end slogan-floater -->
+    <!-- begin primary_links -->
+      <ul class="primary-links"><li class="menu-153 first"><a href="../service.html" title="Hire me">Service</a></li>
+<li class="menu-246"><a href="../portfolio.html">Portfolio</a></li>
+<li class="menu-159"><a href="../contact.html" title="Contact me with your feedback or questions.">Contact</a></li>
+<li class="menu-715 last"><a href="../user/loginc596.html?destination=node%2F42" title="Log in, create new account or request new password." class="popups-form-reload">Log in/Create account</a></li>
+</ul>    <!-- end primary_links -->
+  </div><!-- end header -->
+  <div id="breadcrumb"><div class="breadcrumb"><a href="../index.html">Home</a> » <a href="../blog.html">Blogs</a> » <a href="../blogs/david.html">David&#039;s blog</a></div></div>
+      <div id="center"><div id="squeeze"><!-- begin center -->
+    <h2 class="title">Quick tips on configuring a static IP wireless bridge</h2>                <div class="clear-block">
+      <div class="node">
+    <div class="meta meta-header">
+            <div class="submitted">Submitted by <a href="../users/david.html" title="View user profile.">David</a> on Thu, 2011-03-17 14:29</div>    <div class="terms"><ul class="links inline"><li class="taxonomy_term_43 first"><a href="../category/tags/linux.html" rel="tag" title="">linux</a></li>
+<li class="taxonomy_term_42"><a href="../category/tags/networking.html" rel="tag" title="">networking</a></li>
+<li class="taxonomy_term_17 last"><a href="../category/tags/wireless.html" rel="tag" title="">wireless</a></li>
+</ul></div>  </div>
+  <div class="content">
+    <!-- google_ad_section_start --><p>If you're like me then you don't like to run wires all over the house to connect your home network. &nbsp;It is often easier to simply use wireless throughout most of the home. &nbsp;That is, until you want to connect devices that don't have wireless capabilities. &nbsp;In my case, I have a desktop computer which does not have a wireless card. &nbsp;Instead of buying a wireless card for the desktop, I decided to configure an old access point to work as a wireless bridge instead.</p><p>The wireless AP / bridge which I own is a <span data-scayt_word="TrendNET" data-scaytid="1">TrendNET</span> 638. &nbsp;In order to configure this device, like many wireless devices, you need to connect to it's default static IP. &nbsp;The device does ship with a CD for Windows which makes this process easier, but I am using Ubuntu and I lost the CD. &nbsp;So, in order to connect to the devices static IP you first need to know the static IP. &nbsp;If you don't know the IP, then your first task should be to find it. &nbsp;I was able to get the <span data-scayt_word="TrendNET" data-scaytid="2">TrendNET</span> 638's static IP by looking in the devices user guide which is still <a href="http://www.trendnet.com/downloads/list_subcategory.asp?SUBTYPE_ID=1296">available on their website</a>, fortunately. &nbsp;The static IP address is 192.168.10.100.</p><p>Knowing the IP, now I need to change my computer IP so that I can connect to the device. &nbsp;From the little I know about networking, I remembered that the computer has to be on the same subnet as the device it is trying to connect to. &nbsp;(Please correct me if I am using the term subnet incorrectly here.) &nbsp;In my case I needed to manually set my network IP to 192.168.10.50. &nbsp;It really doesn't matter that I used .50 in this case as long as it isn't .100 which is the same as the device. &nbsp;By setting my IP to 192.168.10.50 I am put on the same subnet as the device and I can now connect to the device by going to my browser and entering 192.168.10.100.</p><p>Here is a short video to show how to manually configure a static IP in Ubuntu 10.10 to connect to the <span data-scayt_word="TrendNET" data-scaytid="3">TrendNET</span>&nbsp;638 wireless AP.</p><p><iframe allowfullscreen="" frameborder="0" height="390" src="http://www.youtube.com/embed/A-HfU2Cdz4Q" title="YouTube video player" width="480"></iframe></p><!-- google_ad_section_end -->    <div class="meta meta-footer">
+      <ul class="links inline"><li class="blog_usernames_blog first last"><a href="../blogs/david.html" title="Read David&#039;s latest blog entries.">David&#039;s blog</a></li>
+</ul>    </div>
+  </div>
+</div>
+    </div>
+      </div></div><!-- end center -->
+    <div id="footer"><!-- start footer -->
+          </div><!-- end footer -->
+</div><!-- end wrapper -->
+</div><!-- end container -->
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-9522659-1"]);_gaq.push(["_setVar", "anonymous user"]);_gaq.push(['_setCustomVar', 1, "User roles", "anonymous user", 1]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+</body>
+
+<!-- Mirrored from webpagedeveloper.me/blog/quick-tips-configuring-static-ip-wireless-bridge by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 12 Jun 2013 15:47:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+</html>
