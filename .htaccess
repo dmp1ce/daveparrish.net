@@ -5,8 +5,8 @@ DirectoryIndex index.html
 DirectoryIndex index.html
 
 # Redirects to old site pages
-Redirect 301 ^/contact$ /contact.html
-Redirect 301 ^/sitemap.xml$ /drupal_archive/sitemap.xml
+Redirect 301 /contact /contact.html
+Redirect 301 /sitemap.xml /drupal_archive/sitemap.xml
 RedirectMatch 301 ^/([\w-/]+)$ /drupal_archive/$1.html
 
 # Various rewrite rules.
