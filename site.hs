@@ -82,7 +82,10 @@ postList sortFilter = do
 
 --------------------------------------------------------------------------------
 myConfiguration :: Configuration
-myConfiguration = defaultConfiguration {ignoreFile = ignoreFile'}
+myConfiguration = defaultConfiguration
+  { deployCommand = "rsync -ave 'ssh' _site/ w_davep@davep.he1251.vps.webenabled.net:public_html/hakyll"
+  , ignoreFile = ignoreFile'
+  }
   where
     ignoreFile' ".htaccess" = False
     ignoreFile' path        = ignoreFile defaultConfiguration path
