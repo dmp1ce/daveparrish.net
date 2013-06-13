@@ -27,6 +27,8 @@ RedirectMatch 301 ^/([\w-/]+)$ /drupal_archive/$1.html
   RewriteRule ^(.*)$ http://www.webpagedeveloper.me/$1 [L,R=301]
   RewriteCond %{HTTP_HOST} ^webpagedeveloper\.me$ [NC]
   RewriteRule ^(.*)$ http://www.webpagedeveloper.me/$1 [L,R=301]
+  RewriteCond %{HTTP_HOST} ^davep\.he1251\.vps\.webenabled\.net$ [NC]
+  RewriteRule ^(.*)$ http://www.webpagedeveloper.me/$1 [L,R=301]
   #
   # To redirect all users to access the site WITHOUT the 'www.' prefix,
   # (http://www.example.com/... will be redirected to http://example.com/...)
