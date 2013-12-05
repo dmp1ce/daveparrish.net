@@ -1,91 +1,120 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import Data.Monoid (mappend)
-import Hakyll
+import           Control.Applicative ((<$>))
+import           Control.Arrow       (second)
+import           Control.Monad       (forM_)
+import           Data.Char           (isDigit)
+import           Data.List           (isPrefixOf, partition, sortBy)
+import           Data.Monoid         (mappend)
+import           Data.Ord            (comparing)
+import           Hakyll
+import           System.FilePath     (dropTrailingPathSeparator, splitPath)
+import           Text.Pandoc
+
 
 --------------------------------------------------------------------------------
 main :: IO ()
-main = hakyllWith myConfiguration $ do
-  -- Route to the old Drupal archive site
-  match "drupal_archive/webpagedeveloper.me/**" $ do
-    route   (gsubRoute "^drupal_archive/webpagedeveloper.me/"
-              (const "drupal_archive/"))
-    compile copyFileCompiler
+main = hakyllWith config $ do
+    match "css/*" $ do
+        route   idRoute
+        compile compressCssCompiler
 
-  -- Copy .htaccess file for redirecting old urls to new
-  match ".htaccess" $ do
-    route idRoute
-    compile copyFileCompiler
+    -- Static directories
+    forM_ ["images/*", "examples/*"] $ \f -> match f $ do
+        route   idRoute
+        compile copyFileCompiler
 
-  match "images/*" $ do
-    route   idRoute
-    compile copyFileCompiler
+    -- Haddock stuff
+    match "reference/**.html" $ do
+        route   idRoute
+        compile $ fmap (withUrls hackage) <$> getResourceString
 
-  match "css/*" $ do
-    route   idRoute
-    compile compressCssCompiler
+    -- Haddock stuff
+    match ("reference/**" `mappend` complement "**.html") $ do
+        route   idRoute
+        compile copyFileCompiler
 
-  match (fromList ["about.markdown", "contact.markdown"]) $ do
-    route   $ setExtension "html"
-    compile $ pandocCompiler
-      >>= loadAndApplyTemplate "templates/default.html" defaultContext
-      >>= relativizeUrls
+    -- Pages
+    match "*.markdown" $ do
+        route   $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
-  match "posts/*" $ do
-    route $ setExtension "html"
-    compile $ pandocCompiler
-      >>= loadAndApplyTemplate "templates/post.html"    postCtx
-      >>= loadAndApplyTemplate "templates/default.html" postCtx
-      >>= relativizeUrls
+    -- Tutorials
+    match "tutorials/*" $ do
+        route   $ setExtension "html"
+        compile $ pandocCompilerWith defaultHakyllReaderOptions withToc
+            >>= loadAndApplyTemplate "templates/tutorial.html" defaultContext
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
-  create ["archive.html"] $ do
-    route idRoute
-    compile $ do
-      let archiveCtx =
-            field "posts" (\_ -> postList recentFirst) `mappend`
-            constField "title" "Archives"              `mappend`
-            defaultContext
+    -- Tutorial list
+    create ["tutorials.html"] $ do
+        route idRoute
+        compile $ do
+            tutorials <- loadAll "tutorials/*"
+            itemTpl   <- loadBody "templates/tutorial-item.html"
+            let (series, articles) = partitionTutorials $
+                    sortBy (comparing itemIdentifier) tutorials
 
-      makeItem ""
-        >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-        >>= loadAndApplyTemplate "templates/default.html" archiveCtx
-        >>= relativizeUrls
+            series'   <- applyTemplateList itemTpl defaultContext series
+            articles' <- applyTemplateList itemTpl defaultContext articles
 
+            let tutorialsCtx =
+                    constField "title" "Tutorials"  `mappend`
+                    constField "series" series'     `mappend`
+                    constField "articles" articles' `mappend`
+                    defaultContext
 
-  match "index.html" $ do
-    route idRoute
-    compile $ do
-    let indexCtx = field "posts" $ \_ ->
-                        postList $ fmap (take 3) . recentFirst
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/tutorials.html" tutorialsCtx
+                >>= loadAndApplyTemplate "templates/default.html" tutorialsCtx
+                >>= relativizeUrls
 
-    getResourceBody
-      >>= applyAsTemplate indexCtx
-      >>= loadAndApplyTemplate "templates/default.html" postCtx
-      >>= relativizeUrls
-
-  match "templates/*" $ compile templateCompiler
-
---------------------------------------------------------------------------------
-postCtx :: Context String
-postCtx =
-  dateField "date" "%B %e, %Y - %r" `mappend`
-  dateField "shortdate" "%B %e, %Y" `mappend`
-  defaultContext
-
---------------------------------------------------------------------------------
-postList :: ([Item String] -> Compiler [Item String]) -> Compiler String
-postList sortFilter = do
-  posts   <- sortFilter =<< loadAll "posts/*"
-  itemTpl <- loadBody "templates/post-item.html"
-  list    <- applyTemplateList itemTpl postCtx posts
-  return list
-
---------------------------------------------------------------------------------
-myConfiguration :: Configuration
-myConfiguration = defaultConfiguration
-  { deployCommand = "rsync -ave 'ssh' _site/ w_davep@davep.he1251.vps.webenabled.net:public_html/hakyll"
-  , ignoreFile = ignoreFile'
-  }
+    -- Templates
+    match "templates/*" $ compile templateCompiler
   where
-    ignoreFile' ".htaccess" = False
-    ignoreFile' path        = ignoreFile defaultConfiguration path
+    withToc = defaultHakyllWriterOptions
+        { writerTableOfContents = True
+        , writerTemplate = "$toc$\n$body$"
+        , writerStandalone = True
+        }
+
+
+--------------------------------------------------------------------------------
+config :: Configuration
+config = defaultConfiguration
+    { deployCommand = "rsync --checksum -ave 'ssh -p 2222' \
+                      \_site/* \
+                      \jaspervdj@jaspervdj.be:jaspervdj.be/hakyll/"
+    }
+
+
+--------------------------------------------------------------------------------
+-- | Turns
+--
+-- > /usr/share/doc/ghc/html/libraries/base-4.6.0.0/Data-String.html
+--
+-- into
+--
+-- > http://hackage.haskell.org/packages/archive/base/4.6.0.0/doc/html/Data-String.html
+hackage :: String -> String
+hackage url
+    | "/usr" `isPrefixOf` url =
+        "http://hackage.haskell.org/packages/archive/" ++
+        packageName ++ "/" ++ version' ++ "/doc/html/" ++ baseName
+    | otherwise               = url
+  where
+    (packageName, version')  = second (drop 1) $ break (== '-') package
+    (baseName : package : _) = map dropTrailingPathSeparator $
+        reverse $ splitPath url
+
+
+--------------------------------------------------------------------------------
+-- | Partition tutorials into tutorial series & other articles
+partitionTutorials :: [Item a] -> ([Item a], [Item a])
+partitionTutorials = partition $ \i ->
+    case splitPath (toFilePath $ itemIdentifier i) of
+        [_, (x : _)] -> isDigit x
+        _            -> False
