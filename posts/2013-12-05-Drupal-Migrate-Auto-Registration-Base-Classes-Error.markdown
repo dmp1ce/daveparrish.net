@@ -1,6 +1,6 @@
 ---
 title: Drupal Migrate error due to auto registration and base classes
-date: 2013-12-05 14:47:47
+date: 2013-12-05 11:20:00
 ---
 
 If you are getting an error similar to the following when using the `drush ms` command:
