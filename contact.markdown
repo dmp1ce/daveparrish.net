@@ -5,6 +5,7 @@ title: Contact
 daveparrish+contact@gmail.com<br />
 919-413-6757<br />
 Bitmessage: BM-2D8XtkzRi3ZKw9ru8RpKA5dmpR8tnbmz5R<br />
+[GPG key](files/David Parrish.asc)
 
 ### Find Me At
 * [GitHub](https://github.com/dmp1ce)

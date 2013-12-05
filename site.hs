@@ -21,6 +21,10 @@ main = hakyllWith myConfiguration $ do
     route   idRoute
     compile copyFileCompiler
 
+  match "files/*" $ do
+    route   idRoute
+    compile copyFileCompiler
+
   match "css/*" $ do
     route   idRoute
     compile compressCssCompiler
