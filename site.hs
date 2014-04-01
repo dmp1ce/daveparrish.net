@@ -12,9 +12,15 @@ main = hakyllWith myConfiguration $ do
               (const "drupal_archive/"))
     compile copyFileCompiler
 
+  -- Copy over keybase proof
+  match "keybase/*" $ do
+    route   (gsubRoute "^keybase/"
+              (const ".well-known/"))
+    compile copyFileCompiler
+
   -- Copy .htaccess file for redirecting old urls to new
   match ".htaccess" $ do
-    route idRoute
+    route   idRoute
     compile copyFileCompiler
 
   match "images/*" $ do
