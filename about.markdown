@@ -60,7 +60,7 @@ I became very interested in economics around 2010 and that is when I stumbled up
 bitcoin. I now exchange my services for bitcoin and I am a local exchanger in the
 Raleigh area. You can often find me at the
 [Triangle Bitcoin Meetup](http://www.meetup.com/Triangle-Bitcoin-Meetup/) which
-I help organize.
+I help organize. If you are interested, my current bitcoin price can be found with [this calculator](https://dmp1ce.github.io/Dave-s-BTC-Price).
 
 #### Health & Fitness
 
