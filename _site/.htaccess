@@ -1,0 +1,53 @@
+# Set the default handler.
+DirectoryIndex index.html
+
+# Set the default handler.
+DirectoryIndex index.html
+
+# Redirects to old site pages
+Redirect 301 /contact /contact.html
+Redirect 301 /sitemap.xml /drupal_archive/sitemap.xml
+Redirect 301 /mybtcprice https://dmp1ce.github.io/Dave-s-BTC-Price
+RedirectMatch 301 ^/([\w-/]+)$ /drupal_archive/$1.html
+
+# Various rewrite rules.
+# Pulled from Drupal .htaccess
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  # If your site can be accessed both with and without the 'www.' prefix, you
+  # can use one of the following settings to redirect users to your preferred
+  # URL, either WITH or WITHOUT the 'www.' prefix. Choose ONLY one option:
+  #
+  # To redirect all users to access the site WITH the 'www.' prefix,
+  # (http://example.com/... will be redirected to http://www.example.com/...)
+  # adapt and uncomment the following:
+  RewriteCond %{HTTP_HOST} ^daveparrish\.net$ [NC]
+  RewriteRule ^(.*)$ http://www.webpagedeveloper.me/$1 [L,R=301]
+  RewriteCond %{HTTP_HOST} ^www\.daveparrish\.net$ [NC]
+  RewriteRule ^(.*)$ http://www.webpagedeveloper.me/$1 [L,R=301]
+  RewriteCond %{HTTP_HOST} ^webpagedeveloper\.me$ [NC]
+  RewriteRule ^(.*)$ http://www.webpagedeveloper.me/$1 [L,R=301]
+  RewriteCond %{HTTP_HOST} ^davep\.he1251\.vps\.webenabled\.net$ [NC]
+  RewriteRule ^(.*)$ http://www.webpagedeveloper.me/$1 [L,R=301]
+  #
+  # To redirect all users to access the site WITHOUT the 'www.' prefix,
+  # (http://www.example.com/... will be redirected to http://example.com/...)
+  # uncomment and adapt the following:
+  # RewriteCond %{HTTP_HOST} ^www\.daveparrish\.net$ [NC]
+  # RewriteRule ^(.*)$ http://webpagedeveloper.me/$1 [L,R=301]
+  # RewriteCond %{HTTP_HOST} ^daveparrish\.net$ [NC]
+  # RewriteRule ^(.*)$ http://webpagedeveloper.me/$1 [L,R=301]
+  # RewriteCond %{HTTP_HOST} ^www\.webpagedeveloper\.me$ [NC]
+  # RewriteRule ^(.*)$ http://webpagedeveloper.me/$1 [L,R=301]
+
+  # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
+  # VirtualDocumentRoot and the rewrite rules are not working properly.
+  # For example if your site is at http://example.com/drupal uncomment and
+  # modify the following line:
+  # RewriteBase /drupal
+  #
+  # If your site is running in a VirtualDocumentRoot at http://example.com/,
+  # uncomment the following line:
+  # RewriteBase /
+</IfModule>
