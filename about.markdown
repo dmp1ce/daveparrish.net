@@ -81,7 +81,7 @@ sustainable and happy life.
 
 I feel like I owe this change to several online resources and books including
 [Free Talk Live](http://freetalklive.com),
-[FreedomainRadio](http://www.freedomainradio.com/),
+[Freedomain Radio](http://www.freedomainradio.com/),
 [Complete Liberty](http://completeliberty.com/) and
 [Nathanal Branden's The Six Pillars of Self Esteem](http://www.amazon.com/The-Six-Pillars-Self-Esteem-Definitive/dp/0553374397).
 I am also lucky to have had supportive friends and
