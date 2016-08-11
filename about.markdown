@@ -1,26 +1,23 @@
 ---
 title: About
+date: 2016-08-11 13:05:51
 ---
-I am a freelance web developer by profession and you can see most of my work on
-the company page at [UpgradeYa.com](http://webpagedesigncompany.net). The purpose
-of this site is to share my more personal interests and projects.
+I am a freelance web developer by profession and you can see my company website
+at [UpgradeYa.com](http://webpagedesigncompany.net). The purpose of this site
+is to share my more personal interests and projects.
 
 ### Current Projects
 
 #### Family
 
-Right now my wife is in the middle of pregnancy and I'm very excited!
-I'm in the process of cleaning out
-a bunch of old junk in the house to make room for more members of the family.
-I'm also trying to set aside some savings
-so that I can spend a lot of time around the child for the first 2 to 3 years.
-I hope I have enough money saved up!
+My most important project is my family. I spend as much time as I can with my
+wife and son. I figured out how I could work from home, partly to spend more
+time with my family.
 
 #### Free Talk Live
 
-I helped transition [Free Talk Live](http://freetalklive.com) into a Drupal 6
-website a few years ago and have been the Drupal maintainer on that website
-since then.
+I helped transition [Free Talk Live](http://freetalklive.com) into a Drupal 7
+website and I am one of the current maintainers.
 
 #### Reddit OAuth Drupal module
 
@@ -33,7 +30,7 @@ module is to allow Drupal websites to easily integrate with the Reddit OAuth API
 
 Also developed for [Free Talk Live](http://freetalklive.com), this module is both
 an example of how to leverage the Reddit OAuth module and provides an easy way of
-integrating a Reddit subreddit into any Drupal 6 website.
+integrating a Reddit subreddit into a Drupal website.
 
 * [Subreddit on Drupal.org](https://drupal.org/sandbox/daveparrish/1930520)
 
@@ -41,16 +38,15 @@ integrating a Reddit subreddit into any Drupal 6 website.
 
 I have been helping manage the development of the Redmine Contracts module.
 [UpgradeYa](http://webpagedesigncompany.net)
-is funding the project and I have been the project manager and client for two
-seperate ruby developers.  Currently, the plugin is stable and we are adding
-fixes for any bugs that are found.  Some features may still be added in the future
-but none are planned at the moment.
+is funding the project and I have been the project manager and client for three
+seperate ruby developers. Currently, the plugin is stable and we are adding
+fixes for any bugs that are found.
 
 This plugin us used on the UpgradeYa Redmine website to help manage contracts with
 our clients.
 
 * [Contracts on Redmine wiki](http://www.redmine.org/plugins/redmine_contracts_with_time_tracking)
-* [Contracts on Github](https://github.com/dmp1ce/redmine-contracts-with-time-tracking-plugin)
+* [Contracts on Github](https://github.com/upgradeya/redmine-contracts-with-time-tracking-plugin)
 
 ### My Interests
 
@@ -103,20 +99,16 @@ another.
 
 #### Gaming
 
-Right now I'm spending most of free time, which isn't much, playing Magic the
-Gathering. I had played when I was younger, but have picked it back up again.
-I have just discovered that I can do free drafts with friends by building a 
-"cube" deck.
-[Here is my cube on CubeTutor.](http://cubetutor.com/viewcube/395)
+When I have time I enjoy gaming but not playing much at the moment. I do however
+have time to listen to Video Game Music while I'm working which I really enjoy. One
+of my favorite shows is [Game Fuel](http://kngi.org/category/past-episodes-gamefuel/).
 
 #### Linux
 
 I'm a linux fanboy. Mostly because I am dedicated to the idea of open source.
 I try to run all my devices on open source software and I try to stay up to
-date on new open source technologies.  Right now I am running Gentoo on my
-laptop and it has been quite a learning experience. I also have some computers
-running Ubuntu, Mint, Debian and CentOS.
+date on new open source technologies.  Right now I am running Arch Linux on my
+laptop. Before that I ran Gentoo, which was quite a learning experience.
 I still use Windows for gaming from time to time, but I have been happy to
-see more an more games coming to linux.
-I also hope to give FreeBSD a try soon as I have heard it is also a great
-open source operating system.
+see more an more games coming to Linux. I also find Wine to be useful in running
+some Windows games I play like Diablo 3.

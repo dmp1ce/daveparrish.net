@@ -1,8 +1,9 @@
 ---
 title: Contact
+date: 2016-08-11 13:18:07
 ---
 
-daveparrish+contact@gmail.com<br />
+daveparrish@tutanota.com<br />
 919-413-6757<br />
 Bitmessage: BM-2D8XtkzRi3ZKw9ru8RpKA5dmpR8tnbmz5R<br />
 [GPG key](files/David Parrish.asc)
@@ -14,3 +15,5 @@ Bitmessage: BM-2D8XtkzRi3ZKw9ru8RpKA5dmpR8tnbmz5R<br />
 * [Facebook](https://www.facebook.com/daveparrish)
 * [Stack Overflow](http://stackoverflow.com/users/350221/dave-parrish)
 * [LinkedIn](http://www.linkedin.com/profile/view?id=14654262)
+* [Arch User Repository](https://aur.archlinux.org/packages/?SeB=m&K=dmp1ce)
+* [HackerRank](https://www.hackerrank.com/daveparrish)

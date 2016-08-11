@@ -38,7 +38,8 @@ main = hakyllWith myConfiguration $ do
   match (fromList ["about.markdown", "contact.markdown"]) $ do
     route   $ setExtension "html"
     compile $ pandocCompiler
-      >>= loadAndApplyTemplate "templates/default.html" defaultContext
+      >>= loadAndApplyTemplate "templates/page.html"    postCtx
+      >>= loadAndApplyTemplate "templates/default.html" postCtx
       >>= relativizeUrls
 
   match "posts/*" $ do
@@ -93,9 +94,7 @@ postList sortFilter = do
 --------------------------------------------------------------------------------
 myConfiguration :: Configuration
 myConfiguration = defaultConfiguration
-  { deployCommand = "rsync -ave 'ssh' _site/ w_davep@davep.he1251.vps.webenabled.net:public_html/hakyll"
-  , ignoreFile = ignoreFile'
-  }
+  { ignoreFile = ignoreFile' }
   where
     ignoreFile' ".htaccess" = False
     ignoreFile' path        = ignoreFile defaultConfiguration path
