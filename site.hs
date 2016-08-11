@@ -79,8 +79,9 @@ main = hakyllWith myConfiguration $ do
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
-  dateField "date" "%B %e, %Y - %r" `mappend`
-  dateField "shortdate" "%B %e, %Y" `mappend`
+  dateField "date" "%B %e, %Y - %r"     `mappend`
+  dateField "modified" "%B %e, %Y - %r" `mappend`
+  dateField "shortdate" "%B %e, %Y"     `mappend`
   defaultContext
 
 --------------------------------------------------------------------------------

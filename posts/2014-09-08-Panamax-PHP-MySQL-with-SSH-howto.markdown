@@ -139,5 +139,3 @@ $mysqli->close();
 By now you should have a good idea of what is possible with this template.  I encourage you to modify the template to meet your needs.  Panamax provides a wide range of possibilities.  This template only scratches the surface.
 
 Enjoy!
-
-_Modifed: 2014-09-09 18:10:10_
