@@ -1,10 +1,10 @@
 ---
 title: Contact
-date: 2016-08-11 13:18:07
+date: 2016-08-12 13:07:25
 ---
 
 daveparrish@tutanota.com<br />
-919-413-6757<br />
+919-413-6757 ([Signal](https://whispersystems.org/) or [Telegram](https://telegram.org/) please)<br />
 Bitmessage: BM-2D8XtkzRi3ZKw9ru8RpKA5dmpR8tnbmz5R<br />
 [GPG key](files/David Parrish.asc)
 
