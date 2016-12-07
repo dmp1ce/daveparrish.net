@@ -1,12 +1,12 @@
 ---
 title: Contact
-date: 2016-12-06 23:16:00
+date: 2016-12-06 23:29:16
 ---
 
 daveparrish@tutanota.com<br />
 919-413-6757 ([Signal](https://whispersystems.org/) or [Telegram](https://telegram.org/) please)<br />
-Bitmessage: BM-2D8XtkzRi3ZKw9ru8RpKA5dmpR8tnbmz5R<br />
-ZeroMail: dmp1ce<br />
+[Bitmessage](https://bitmessage.org/wiki/Main_Page): BM-2D8XtkzRi3ZKw9ru8RpKA5dmpR8tnbmz5R<br />
+ZeroMail on [ZeroNet](https://zeronet.io/): dmp1ce<br />
 [GPG key](files/David Parrish.asc)
 
 ### Find Me At
