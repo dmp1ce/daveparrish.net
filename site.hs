@@ -1,6 +1,10 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 import Data.Monoid (mappend)
+import Control.Applicative
+import Data.Time.Format (formatTime, parseTimeM )
+import Data.Time.Locale.Compat (defaultTimeLocale)
+import Data.Time.Clock (UTCTime)
 import Hakyll
 
 --------------------------------------------------------------------------------
@@ -80,9 +84,31 @@ main = hakyllWith myConfiguration $ do
 postCtx :: Context String
 postCtx =
   dateField "date" "%B %e, %Y - %r"     `mappend`
-  dateField "modified" "%B %e, %Y - %r" `mappend`
   dateField "shortdate" "%B %e, %Y"     `mappend`
+  formatDateFieldValue "modified" "%B %e, %Y - %r" `mappend`
   defaultContext
+
+formatDateFieldValue :: String    -- ^ Field name
+                     -> String    -- ^ Format string
+                     -> Context a -- ^ Resulting context
+formatDateFieldValue name fmt = Context $ \k _ i ->
+  if (k == name)
+  then (do value <- getMetadataField (itemIdentifier i) k
+           maybe empty (\v -> do
+                           let mSDate = parseAndFormat fmt v
+                           case mSDate of
+                             (Just sDate) -> (return . StringField) sDate
+                             Nothing  -> empty
+                       ) value
+       )
+  else empty
+  where
+    parseAndFormat :: String -> String -> Maybe String
+    parseAndFormat fmt' v' = do
+      let timeV = (parseTimeM True defaultTimeLocale "%Y-%m-%d %H:%M:%S" v') :: Maybe UTCTime
+      case timeV of
+        (Just t) -> Just $ formatTime defaultTimeLocale fmt' t
+        Nothing   -> Nothing
 
 --------------------------------------------------------------------------------
 postList :: ([Item String] -> Compiler [Item String]) -> Compiler String
