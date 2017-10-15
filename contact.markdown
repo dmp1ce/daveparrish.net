@@ -1,6 +1,6 @@
 ---
 title: Contact
-date: 2017-08-11 15:04:00
+date: 2017-10-15 11:33:35
 ---
 
 daveparrish@tutanota.com<br />
@@ -13,6 +13,7 @@ ZeroMail on [ZeroNet](https://zeronet.io/): dmp1ce<br />
 ### Find Me At
 * [GitHub](https://github.com/dmp1ce)
 * [Drupal.org](https://drupal.org/user/462094)
+* [Keybase.io](https://keybase.io/daveparrish)
 * [Google Plus](https://plus.google.com/105177229016866894615/posts)
 * [Facebook](https://www.facebook.com/daveparrish)
 * [Stack Overflow](http://stackoverflow.com/users/350221/dave-parrish)
