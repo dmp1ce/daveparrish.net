@@ -1,6 +1,6 @@
 ---
 title: Contact
-date: 2017-10-15 11:33:35
+date: 2017-10-15 11:46:10
 ---
 
 daveparrish@tutanota.com<br />
@@ -17,7 +17,7 @@ ZeroMail on [ZeroNet](https://zeronet.io/): dmp1ce<br />
 * [Google Plus](https://plus.google.com/105177229016866894615/posts)
 * [Facebook](https://www.facebook.com/daveparrish)
 * [Stack Overflow](http://stackoverflow.com/users/350221/dave-parrish)
-* [LinkedIn](http://www.linkedin.com/profile/view?id=14654262)
+* [LinkedIn](https://www.linkedin.com/in/davemparrish)
 * [Arch User Repository](https://aur.archlinux.org/packages/?SeB=m&K=dmp1ce)
 * [HackerRank](https://www.hackerrank.com/daveparrish)
 * [CodinGame](https://www.codingame.com/profile/7600aae35a7c4864a3b0dfb0e19f47710810371)
