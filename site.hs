@@ -121,7 +121,11 @@ postList sortFilter = do
 --------------------------------------------------------------------------------
 myConfiguration :: Configuration
 myConfiguration = defaultConfiguration
-  { ignoreFile = ignoreFile' }
+  { ignoreFile = ignoreFile'
+  -- Create DATE and copy current site to DATE directory and then set the latest.
+  -- Delete all but the last five builds.
+  , deployCommand = "DATE=$(date +%Y-%m-%d:%H:%M:%S) && rsync -ave 'ssh -p22002' _site builds@hs.daveparrish.net:daveparrish/\"$DATE\" && ssh -p22002 builds@hs.daveparrish.net \"cd daveparrish && rm -f latest && ln -sf \\\"$DATE\\\" latest && ./cleanUp.bash\""
+  }
   where
     ignoreFile' ".htaccess" = False
     ignoreFile' path        = ignoreFile defaultConfiguration path
