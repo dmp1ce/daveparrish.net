@@ -17,9 +17,8 @@ main = hakyllWith myConfiguration $ do
     compile copyFileCompiler
 
   -- Copy over keybase proof
-  match "keybase/*" $ do
-    route   (gsubRoute "^keybase/"
-              (const ".well-known/"))
+  match "keybase.txt" $ do
+    route   idRoute
     compile copyFileCompiler
 
   -- Copy .htaccess file for redirecting old urls to new

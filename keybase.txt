@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/daveparrish
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://daveparrish.net
+  * I am daveparrish (https://keybase.io/daveparrish) on keybase.
+  * I have a public key ASCkCayhXURHEdfT2hTv9lsWV6KtWF4DhiruNo4gReUE5Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101f70d67687e32e9811418a6c3e0ad3c7426ec02b2eae8cb2a6dd7545776c23a220a",
+      "host": "keybase.io",
+      "kid": "0120a409aca15d444711d7d3da14eff65b1657a2ad585e03862aee368e2045e504e40a",
+      "uid": "13d4e0b444398bfef95d58d3c9b5da00",
+      "username": "daveparrish"
+    },
+    "merkle_root": {
+      "ctime": 1512850975,
+      "hash": "e64228c9f0dad8d8b15de22852066467d60ecb967087b74489c56efb2a4758e819c405006b22c47bf4b984ff2ccce4e5e68703b4814b3afa1bb46d42dfcbacef",
+      "hash_meta": "c50c2244a320062df2f2ae5fff47f032a52f45950cdd6595b42f42934d4d26ea",
+      "seqno": 1796147
+    },
+    "service": {
+      "hostname": "daveparrish.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.36"
+  },
+  "ctime": 1512851057,
+  "expire_in": 504576000,
+  "prev": "69692ea63aa7fa5f8f5985a130b216505db3aa9bbf1e054d17372989542cb9e3",
+  "seqno": 43,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgpAmsoV1ERxHX09oU7/ZbFleirVheA4Yq7jaOIEXlBOQKp3BheWxvYWTFA0t7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxZjcwZDY3Njg3ZTMyZTk4MTE0MThhNmMzZTBhZDNjNzQyNmVjMDJiMmVhZThjYjJhNmRkNzU0NTc3NmMyM2EyMjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYTQwOWFjYTE1ZDQ0NDcxMWQ3ZDNkYTE0ZWZmNjViMTY1N2EyYWQ1ODVlMDM4NjJhZWUzNjhlMjA0NWU1MDRlNDBhIiwidWlkIjoiMTNkNGUwYjQ0NDM5OGJmZWY5NWQ1OGQzYzliNWRhMDAiLCJ1c2VybmFtZSI6ImRhdmVwYXJyaXNoIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTEyODUwOTc1LCJoYXNoIjoiZTY0MjI4YzlmMGRhZDhkOGIxNWRlMjI4NTIwNjY0NjdkNjBlY2I5NjcwODdiNzQ0ODljNTZlZmIyYTQ3NThlODE5YzQwNTAwNmIyMmM0N2JmNGI5ODRmZjJjY2NlNGU1ZTY4NzAzYjQ4MTRiM2FmYTFiYjQ2ZDQyZGZjYmFjZWYiLCJoYXNoX21ldGEiOiJjNTBjMjI0NGEzMjAwNjJkZjJmMmFlNWZmZjQ3ZjAzMmE1MmY0NTk1MGNkZDY1OTViNDJmNDI5MzRkNGQyNmVhIiwic2Vxbm8iOjE3OTYxNDd9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiZGF2ZXBhcnJpc2gubmV0IiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMzYifSwiY3RpbWUiOjE1MTI4NTEwNTcsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiNjk2OTJlYTYzYWE3ZmE1ZjhmNTk4NWExMzBiMjE2NTA1ZGIzYWE5YmJmMWUwNTRkMTczNzI5ODk1NDJjYjllMyIsInNlcW5vIjo0MywidGFnIjoic2lnbmF0dXJlIn2jc2lnxECeRzFkJq9QMhQKNFqMJ8rX7psITy+p5Z9yJAZ1fKwuKztQ7JSwaKp0a8zFU8sdWJlD1VyvQea2MrRw+Y+BYJwBqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgoBvxGhMw+a++ouiIgFvtQ6zh7nzzxjF8H0c1E/mgeeOjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/daveparrish
+
+==================================================================
