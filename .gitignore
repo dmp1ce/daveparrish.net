@@ -1,5 +1,4 @@
-site
-site.o
-site.hi
+.stack-work
+daveparrish.cabal
 _cache
 _site

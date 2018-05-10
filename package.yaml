@@ -1,0 +1,34 @@
+name: daveparrish
+version: '0.1.0.0'
+synopsis: Dave Parrish's website
+license: PublicDomain
+author: David Parrish
+maintainer: daveparrish@tutanota.com
+extra-source-files:
+- package.yaml
+- README.md
+- stack.yaml
+
+github: dmp1ce/daveparrish.net
+
+ghc-options:
+- -O2
+- -Wall
+- -Wcompat
+- -Werror
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wredundant-constraints
+
+executables:
+  site:
+    main: site.hs
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    dependencies:
+    - base
+    - hakyll
+    - time
+    - time-locale-compat

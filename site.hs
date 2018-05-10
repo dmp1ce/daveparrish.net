@@ -69,13 +69,13 @@ main = hakyllWith myConfiguration $ do
   match "index.html" $ do
     route idRoute
     compile $ do
-    let indexCtx = field "posts" $ \_ ->
-                        postList $ fmap (take 3) . recentFirst
+      let indexCtx = field "posts" $ \_ ->
+                                       postList $ fmap (take 3) . recentFirst
 
-    getResourceBody
-      >>= applyAsTemplate indexCtx
-      >>= loadAndApplyTemplate "templates/default.html" postCtx
-      >>= relativizeUrls
+      getResourceBody
+        >>= applyAsTemplate indexCtx
+        >>= loadAndApplyTemplate "templates/default.html" postCtx
+        >>= relativizeUrls
 
   match "templates/*" $ compile templateCompiler
 
@@ -91,7 +91,7 @@ formatDateFieldValue :: String    -- ^ Field name
                      -> String    -- ^ Format string
                      -> Context a -- ^ Resulting context
 formatDateFieldValue name fmt = Context $ \k _ i ->
-  if (k == name)
+  if k == name
   then (do value <- getMetadataField (itemIdentifier i) k
            maybe empty (\v -> do
                            let mSDate = parseAndFormat fmt v
@@ -104,7 +104,7 @@ formatDateFieldValue name fmt = Context $ \k _ i ->
   where
     parseAndFormat :: String -> String -> Maybe String
     parseAndFormat fmt' v' = do
-      let timeV = (parseTimeM True defaultTimeLocale "%Y-%m-%d %H:%M:%S" v') :: Maybe UTCTime
+      let timeV = parseTimeM True defaultTimeLocale "%Y-%m-%d %H:%M:%S" v' :: Maybe UTCTime
       case timeV of
         (Just t) -> Just $ formatTime defaultTimeLocale fmt' t
         Nothing   -> Nothing
@@ -114,8 +114,7 @@ postList :: ([Item String] -> Compiler [Item String]) -> Compiler String
 postList sortFilter = do
   posts   <- sortFilter =<< loadAll "posts/*"
   itemTpl <- loadBody "templates/post-item.html"
-  list    <- applyTemplateList itemTpl postCtx posts
-  return list
+  applyTemplateList itemTpl postCtx posts
 
 --------------------------------------------------------------------------------
 myConfiguration :: Configuration
