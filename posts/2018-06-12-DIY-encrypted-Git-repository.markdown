@@ -5,7 +5,7 @@ date: 2018-06-12 11:50:11
 
 If you are like me and you don't want to depend on any services if you don't have to, you might have wanted to run your own Git repository.
 You might have also wanted to encrypt your repository.
-In my case, I'm using [plain text accounting](http://plaintextaccounting.org/) and managing the changes to the ledger with [Git](https://git-scm.com/).
+In my case, I'm using [plain text accounting](https://plaintextaccounting.org/) and managing the changes to the ledger with [Git](https://git-scm.com/).
 Here are the components I used to create my own encrypted Git repository.
 
 The easy way to get encrypted Git repositories to use the excellent [Keybase](https://keybase.io/blog/encrypted-git-for-everyone) services.
