@@ -1,6 +1,7 @@
 ---
 title: How to download private videos from YouTube with youtube-dl
 date: 2018-06-22 11:25:33
+modified: 2018-06-22 18:58:15
 ---
 
 [youtube-dl](https://rg3.github.io/youtube-dl/) is a wonderful tool for downloading videos so they can be watched offline.
@@ -22,7 +23,7 @@ Here is what eventually worked for me.
 
 ## Why cookies?
 
-I had to use cookies because I couldn't get the `--username` flag to work due to an issue with 2FA in youtube-dl. If 2FA authentication is not turned on then maybe `--username` will work. Because of this I needed to export my cookies with EditThisCookie plugin. I couldn't find a plugin for my version of Firefox (version 60.0.2).
+I had to use [cookies](https://en.wikipedia.org/wiki/HTTP_cookie) because I couldn't get the `--username` flag to work due to an issue with 2FA in youtube-dl. If 2FA authentication is not turned on then maybe `--username` will work. Because of this I needed to export my cookies with EditThisCookie plugin. I couldn't find a plugin for my version of Firefox (version 60.0.2).
 
 ## EditThisCookie
 
