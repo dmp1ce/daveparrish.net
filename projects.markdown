@@ -3,7 +3,7 @@ title: Projects
 date: 2018-08-20 15:37:43
 ---
 
-To support me with my projects and see updates for my more recent projects please see
+To support me with my projects and see updates for my more recent projects please visit
 [my Patreon page](https://www.patreon.com/dmp1ce).
 
 ## Contracts, a Redmine plugin

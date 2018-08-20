@@ -9,7 +9,7 @@ is to share my more personal interests and projects.
 ## Family
 
 My most important project is my family. I spend as much time as I can with my
-wife and son. I figured out how I could work from home, partly to spend more
+wife and children. I figured out how I could work from home, partly to spend more
 time with my family.
 
 ## Free Talk Live
@@ -21,7 +21,7 @@ website and I am one of the current maintainers.
 
 I work on various projects to help me (and hopefully others) use Linux and other
 open source projects. See my [Patreon page](https://www.patreon.com/dmp1ce)
-to follow my work and support me. I also have a [list of other projects](/projects) I have worked on.
+to follow my work and support me. I also have a [list of other projects](/projects.html) I have worked on.
 
 ## Bitcoin
 
