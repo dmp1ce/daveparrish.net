@@ -38,7 +38,9 @@ main = hakyllWith myConfiguration $ do
     route   idRoute
     compile compressCssCompiler
 
-  match (fromList ["about.markdown", "contact.markdown"]) $ do
+  match (fromList [ "about.markdown"
+                  , "contact.markdown"
+                  , "projects.markdown"]) $ do
     route   $ setExtension "html"
     compile $ pandocCompiler
       >>= loadAndApplyTemplate "templates/page.html"    postCtx
