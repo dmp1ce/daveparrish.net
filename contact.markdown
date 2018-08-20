@@ -1,6 +1,6 @@
 ---
 title: Contact
-date: 2018-06-06 11:54:00
+date: 2018-08-20 15:18:57
 ---
 
 daveparrish@tutanota.com<br />
@@ -12,6 +12,7 @@ ZeroMail on [ZeroNet](https://zeronet.io/): dmp1ce<br />
 
 ### Find Me At
 * [GitHub](https://github.com/dmp1ce)
+* [Patreon](https://www.patreon.com/dmp1ce)
 * [Drupal.org](https://drupal.org/user/462094)
 * [Keybase.io](https://keybase.io/daveparrish)
 * [\@Dave_Parrish](https://twitter.com/Dave_Parrish) on Twitter
