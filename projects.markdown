@@ -1,6 +1,5 @@
 ---
 title: Projects
-date: 2018-08-20 15:37:43
 ---
 
 To support me with my projects and see updates for my more recent projects please visit
