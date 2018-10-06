@@ -1,7 +1,5 @@
 ---
 title: Force VSYNC on Linux desktop for Nvidia graphic cards
-date: 2017-01-10 20:39:45
-modified: 2017-01-10 21:00:59
 ---
 
 If you are getting awful [tearing](https://en.wikipedia.org/wiki/Screen_tearing) in on your Linux desktop while trying to watch a video or play a game, then you need to force your desktop compositor to [VSYNC](https://en.wikipedia.org/wiki/Analog_television#Vertical_synchronization). On Arch Linux, I have noticed tearing on Gnome 3 and Mate desktop environments.

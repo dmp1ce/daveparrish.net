@@ -1,7 +1,5 @@
 ---
 title: How to download private videos from YouTube with youtube-dl
-date: 2018-06-22 11:25:33
-modified: 2018-06-22 18:58:15
 ---
 
 [youtube-dl](https://rg3.github.io/youtube-dl/) is a wonderful tool for downloading videos so they can be watched offline.

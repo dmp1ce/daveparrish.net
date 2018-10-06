@@ -1,7 +1,5 @@
 ---
 title: Panamax PHP/MySQL with SSH HOWTO
-date: 2014-09-08 23:30:00
-modified: 2014-09-09 17:41:15
 ---
 
 ![Panamax logo](/images/panamax_logo.png)
