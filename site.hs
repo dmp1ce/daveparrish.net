@@ -1,5 +1,6 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
+import Data.Monoid ((<>))
 import Hakyll
 import Hakyll.FileStore.Git.Context (gitModificationTimeField)
 
@@ -54,8 +55,8 @@ main = hakyllWith myConfiguration $ do
     route idRoute
     compile $ do
       let archiveCtx =
-            field "posts" (\_ -> postList recentFirst) `mappend`
-            constField "title" "Archives"              `mappend`
+            field "posts" (\_ -> postList recentFirst) <>
+            constField "title" "Archives"              <>
             defaultContext
 
       makeItem ""
