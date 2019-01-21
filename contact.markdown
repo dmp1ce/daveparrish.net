@@ -17,7 +17,6 @@ ZeroMail on [ZeroNet](https://zeronet.io/): dmp1ce<br />
 * [Keybase.io](https://keybase.io/daveparrish)
 * [\@Dave_Parrish](https://twitter.com/Dave_Parrish) on Twitter
 * [\@dmp1ce@mastodon.technology](https://mastodon.technology/@dmp1ce) on Mastodon
-* [Google Plus](https://plus.google.com/105177229016866894615/posts)
 * [Facebook](https://www.facebook.com/daveparrish)
 * [Stack Overflow](http://stackoverflow.com/users/350221/dave-parrish)
 * [LinkedIn](https://www.linkedin.com/in/davemparrish)
