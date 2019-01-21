@@ -8,7 +8,6 @@ daveparrish@protonmail.ch<br/>
 919-364-9258 on [Signal](https://whispersystems.org/)<br />
 dmp1ce on [Telegram](https://telegram.org/)<br />
 [Bitmessage](https://bitmessage.org/wiki/Main_Page): BM-2D8XtkzRi3ZKw9ru8RpKA5dmpR8tnbmz5R<br />
-ZeroMail on [ZeroNet](https://zeronet.io/): dmp1ce<br />
 [GPG key](files/David Parrish.asc)
 
 ### Find Me At
