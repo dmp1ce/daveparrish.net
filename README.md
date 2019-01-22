@@ -1,7 +1,7 @@
 # Dave Parrish's site README
 
-## Build
+## Getting started
 
-Install hakyll with stack using `stack install hakyll` then use stack to build site with `stack ghc site.hs`.
+Install hakyll with stack using `stack build` then use stack to build static pages with `stack exec -- site build`.
 
-## Deploy
+Run a local web server with `stack exec -- site server` or open `index.html` to view the site.
