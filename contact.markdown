@@ -1,6 +1,5 @@
 ---
 title: Contact
-date: 2019-01-21 18:44:46
 ---
 
 daveparrish@tutanota.com<br />
