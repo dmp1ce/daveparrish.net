@@ -2,7 +2,9 @@
 {-# LANGUAGE OverloadedStrings #-}
 import Data.Monoid ((<>))
 import Hakyll
-import Hakyll.FileStore.Git.Context (gitModificationTimeField)
+import Hakyll.FileStore.Git.Context (gitGetItemModificationTime)
+import Data.Time.LocalTime (getCurrentTimeZone, utcToZonedTime)
+import Data.Time.Format (formatTime, defaultTimeLocale)
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -78,11 +80,19 @@ main = hakyllWith myConfiguration $ do
 
   match "templates/*" $ compile templateCompiler
 
+-- https://github.com/jaspervdj/hakyll/issues/386#issuecomment-150851641
+gitLocalModifiedTime :: Context a
+gitLocalModifiedTime = field "modified" $ \i -> do
+    mtime    <- gitGetItemModificationTime (itemIdentifier i)
+    timeZone <- unsafeCompiler getCurrentTimeZone
+    let localTime = utcToZonedTime timeZone mtime
+    return $ formatTime defaultTimeLocale "%B %e, %Y - %r" localTime
+
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
   dateField "date" "%B %e, %Y"     <>
-  gitModificationTimeField "modified" "%B %e, %Y - %r" <>
+  gitLocalModifiedTime             <>
   defaultContext
 
 --------------------------------------------------------------------------------

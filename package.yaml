@@ -33,3 +33,4 @@ executables:
     - time
     - time-locale-compat
     - hakyll-filestore
+    - time
