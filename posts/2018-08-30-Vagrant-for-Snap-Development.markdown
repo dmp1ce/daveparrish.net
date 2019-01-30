@@ -3,6 +3,8 @@ title: Vagrant for Snap development
 date: 2018-08-30 11:39:03
 ---
 
+***EDIT: Most likely these instructions no longer work for developing Snaps if you are using `base: core18`. If a base is specified then [multipass](https://github.com/CanonicalLtd/multipass) is used to emulate the environment using KVM which is not supported by VirtualBox. Please try simply the `snapcraft` command on physical hardware first.***
+
 The only way I have found to develop Snap packages on Arch Linux is to use a Ubuntu 16.04 virtual machine to do the development. Getting the vagrant machine is straight forward. You'll first need to add the image to the `Vagrantfile` like so:
 
 ``` ruby
