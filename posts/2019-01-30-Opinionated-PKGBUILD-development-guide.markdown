@@ -1,5 +1,5 @@
 ---
-title: Opinionated development guide for Arch User Repository package maintainers
+title: Opinionated AUR maintainer guide
 ---
 
 # Introduction
