@@ -86,7 +86,7 @@ accounts.google.com	TRUE	/	TRUE	1801458753.849165	SMSV	xxxxxx
 There is still more work to be done on the cookies file in order for it to work with youtube-dl.
 Because [youtube-dl cannot parse the format exported from EditThisCookie](https://github.com/rg3/youtube-dl/issues/4539), the cookie file needs to be run through `curl` like this:
 
-```curl -b cookiefile.txt --cookie-jar newcookiefile.txt '/https://youtube.com'```
+```curl -b cookiefile.txt --cookie-jar newcookiefile.txt 'https://youtube.com'```
 
 That will create a new `newcookiefile.txt` which can be used with youtube-dl.
 
