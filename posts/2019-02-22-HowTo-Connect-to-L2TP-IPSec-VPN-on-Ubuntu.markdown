@@ -14,6 +14,8 @@ These steps [probably](https://github.com/nm-l2tp/network-manager-l2tp/blob/mast
 4. Enter credentials.
 5. Still not working? Check error logs with `sudo journalctl -f` and search error messages. Good Luck!
 
+**EDIT:** Another route to take is to use [a Docker image](https://github.com/ubergarm/l2tp-ipsec-vpn-client) to take care of connecting to the VPN.
+
 ---
 
 # Introduction
@@ -43,3 +45,39 @@ This is the only step I expected. It is straight forward. Enter the host IP, the
 I am sorry if your VPN still doesn't connect. I have only documented what worked for me and tried to leave a trail of the resources which helped me. I don't understand all the setting for L2TP/IPSec and I don't understand why things just don't work by default.
 
 Please take a look at the logs by running `sudo journalctl -f` and search for the error message which jump out to you. By trying to connect from the Gnome GUI should produce the errors, if there are any. Good luck!
+
+## EDIT: Docker
+
+If all these steps seem too frustrating and you are comfortable with the command line, give a docker image a try. I tried [ubergarm/l2tp-ipsec-vpn-client](https://github.com/ubergarm/l2tp-ipsec-vpn-client) which was enough to get connected to the VPN by starting the container with `--privileged` access on `--host` network. Here is the Docker Compose configuration I used:
+
+``` yaml
+# docker-compose.yaml
+
+version: "3"
+
+services:
+  vpn:
+    image: ubergarm/l2tp-ipsec-vpn-client
+    privileged: true
+    network_mode: host
+    environment:
+      VPN_SERVER_IPV4: 'xxx.xxx.xxx.xxx'
+      VPN_PSK: 'shareKey'
+      VPN_USERNAME: 'UserName'
+      VPN_PASSWORD: 'UserPassword'
+    volumes:
+      - "/lib/modules:/lib/modules:ro"
+```
+
+After starting with `docker-compsoe up -d` You'll then need to route your network traffic through the VPN with something like: `sudo ip route add 1.2.3.4 via 10.10.10.1 dev ppp0`. Please see the [documentation on the GitHub project page](https://github.com/ubergarm/l2tp-ipsec-vpn-client#route).
+
+I also found this method useful because a service can be added to the Docker Compose configuration without ever enabling the VPN on the host network. This is done by using the `vpn` service network like so:
+
+``` yaml
+  myservice:
+    image: apline
+    network_mode: service:vpn
+    command: sh -c "while true; do date; sleep 60; done"
+```
+
+You just need to expose the ports to the service on the `vpn` service because `vpn` and `myservice` effectively share the same IP.
