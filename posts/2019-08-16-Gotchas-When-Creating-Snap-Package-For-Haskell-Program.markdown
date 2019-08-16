@@ -28,6 +28,15 @@ Use `plugin: nil` for the part building the Haskell program.
 
 Also, make sure `curl` and any other build dependencies you need are in the `build-packages` section.
 
+# Finding the binary
+
+By default the binary will be stored in `/root/.local/bin` from running `stack buidl --copy-bins`. It is probably more convenient for the application to be in `/bin`. Use `organize` to move the binary were it is needed for the snap. For example:
+
+```
+organize:
+  /root/.local/bin/myapp: bin/myapp
+```
+
 # Automatic Versioning
 
 Snapcraft can use the same version specified in the `package.yaml` like so:
