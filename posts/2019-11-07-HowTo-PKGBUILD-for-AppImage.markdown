@@ -14,6 +14,11 @@ To use the PKGBUILD run `makepkg` to build a `my-project-appimage-0.0.1-1-x86_64
 
 When there is a new release for the AppImage, the version, AppImage source location and sha256 hash can be updated, rebuilt and reinstalled.
 
+---
+
+**NOTE:** See [new post](/posts/2019-11-16-Better-AppImage-PKGBUILD-template.html) on improving upon this template for better GUI integration.
+
+
 ``` bash
 # Maintainer: My Name <myemail@domain.me>
 
@@ -22,7 +27,7 @@ pkgver=0.0.1
 pkgrel=1
 pkgdesc="Description of my project"
 arch=('x86_64')
-url="URL of my project"
+url="https://github.com/user/repo/"
 license=('custom:Unlicense')
 depends=('zlib')
 options=(!strip)
