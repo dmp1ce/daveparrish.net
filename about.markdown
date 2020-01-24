@@ -2,9 +2,9 @@
 title: About
 date: 2018-08-20 15:37:43
 ---
-I am a freelance web developer by profession and you can see my company website
-at [UpgradeYa.com](http://webpagedesigncompany.net). The purpose of this site
-is to share my more personal interests and projects.
+I am a freelance web developer by profession working primarily with
+[UpgradeYa](http://upgradeya.net). I also maintain a bunch of obscure open
+source projects, mostly hosted on [Github](https://github.com/dmp1ce).
 
 ## Family
 
