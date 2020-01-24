@@ -1,6 +1,5 @@
 ---
 title: About
-date: 2018-08-20 15:37:43
 ---
 I am a freelance web developer by profession working primarily with
 [UpgradeYa](http://upgradeya.net). I also maintain a bunch of obscure open
