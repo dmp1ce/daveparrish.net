@@ -2,6 +2,20 @@
 title: How to download private videos from YouTube with youtube-dl
 ---
 
+***
+
+**2020-07-30 Feedback Update**
+
+_The extension [cookies.txt](https://chrome.google.com/webstore/detail/cookiestxt/njabckikapfpffapmjgojcnbfjonfjfg) can also be used, instead of [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg).
+It may no longer be necessary to add cookies from multiple domains, YouTube.com should be the only domain cookies are needed from._
+
+_As an alternative to using cookies, Google now allows for [application specific passwords to bypass 2FA](https://myaccount.google.com/apppasswords) for attempting username/password authentication when downloading a private video._
+
+_I am now getting a [DRM related error when trying to download protected content from YouTube now](https://github.com/ytdl-org/youtube-dl/issues/23223) when trying to download some videos. YMMV_
+
+***
+
+
 [youtube-dl](https://rg3.github.io/youtube-dl/) is a wonderful tool for downloading videos so they can be watched offline.
 Most of the time I only want to store a publicly accessible video.
 Sometimes I want to access a video that is only accessible when I am logged into my [YouTube](https://youtube.com) account.
