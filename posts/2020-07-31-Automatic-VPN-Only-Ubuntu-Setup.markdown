@@ -8,7 +8,7 @@ Sometimes it is important for a machine to only access the Internet through a VP
 
 # Purpose
 
-Provided here is instructions on how to get [Ubuntu](https://ubuntu.com/) to only access the Internet using a [AirVPN](https://airvpn.org/?referred_by=290914), but the instructions are probably adaptable to other *Nixes and other VPN providers. The instructions might be adaptable to Tor instead of a VPN, although I haven't tried and I would be surprised if it would work well because [Tor lacks UDP support](https://tor.stackexchange.com/a/4524/8273).
+Provided here is instructions on how to get [Ubuntu](https://ubuntu.com/) to only access the Internet using [AirVPN](https://airvpn.org/?referred_by=290914), but the instructions are probably adaptable to other *Nixes and other VPN providers. The instructions might be adaptable to Tor instead of a VPN, although I haven't tried and I would be surprised if it would work well because [Tor lacks UDP support](https://tor.stackexchange.com/a/4524/8273).
 
 # Picking a VPN and AirVPN
 
@@ -30,7 +30,7 @@ Here is my nm-connection-manager settings.
 
 Usually, forcing traffic through VPN is the most tricky part because of all the edge cases. For example, what happens if the VPN connection goes down? For some use cases, it would be a disaster to just start communicating over the Internet without the VPN!
 
-To ensure traffic is only broadcast through the VPN, I creating a script which deletes the "default" network route and creates a route which only goes through the AirVPN service. For more information on how this is possible in Ubuntu, see the resources [Routing All Traffic Through a VPN Gateway on Linux](https://sweetcode.io/routing-all-traffic-through-a-vpn-gateway-on-linux/) and [How do I make the script to run automatically when tun0 interface up/down events?](https://askubuntu.com/a/41445/25776).
+To ensure traffic is only broadcast through the VPN, I created a script which deletes the "default" network route and creates a route which only goes through the AirVPN service. For more information on how this is possible in Ubuntu, see the resources [Routing All Traffic Through a VPN Gateway on Linux](https://sweetcode.io/routing-all-traffic-through-a-vpn-gateway-on-linux/) and [How do I make the script to run automatically when tun0 interface up/down events?](https://askubuntu.com/a/41445/25776).
 
 Below is my script for specifically routing through AirVPN gateways. The file is located in `/etc/network/if-up.d` so that it will be run every time the a networking interface starts up. If the AirVPN service goes down or connection is broken then then no routes will be available, preventing any communication over the Internet.
 
@@ -57,7 +57,7 @@ if [ "$IFACE" = enp1s0 ]; then
 fi
 ```
 
-If you notice the network is down for whatever reason, then turning networking off and then on or turning on the VPN should get the Internet (through the VPN only) working again. I noticed my time and date would be wrong when resuming a virtual machine I was testing on. Toggling the VPN should help with fixing the date/time also.
+If you notice the Internet is down, then turning networking off and then on or turning on the VPN should get the Internet (through the VPN only) working again. I noticed my time and date would be wrong when resuming a virtual machine I was testing on. Toggling the VPN should help with fixing the date/time also.
 
 ## Modifications
 
@@ -70,4 +70,4 @@ You'll also need to get a list of IPs your VPN provider uses so that you can all
 
 # Profit!
 
-It should now be safe to rely on the VPN connection always being the route taken when communicating with the Internet. Please notify me if you see any mistakes or bugs. There are a variety of ways to reach my on [my contact page](/contact.html). Thank you for taking to time to read this guide!
+It should now be safe to rely on the VPN connection always being the route taken when communicating with the Internet. Please notify me if you see any mistakes or bugs. There are a variety of ways to reach me on [my contact page](/contact.html). Thank you for taking to time to read this guide! 💯
