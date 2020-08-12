@@ -23,3 +23,4 @@ dmp1ce on [Telegram](https://telegram.org/)<br />
 * [CodinGame](https://www.codingame.com/profile/7600aae35a7c4864a3b0dfb0e19f47710810371)
 * [Steam](http://steamcommunity.com/id/DaveParrish/)
 * [Bandcamp](https://bandcamp.com/daveparrish)
+* [Spotify](https://open.spotify.com/user/12123595751?si=uMmB2OE_T5i0uHbDnSpWjw)
