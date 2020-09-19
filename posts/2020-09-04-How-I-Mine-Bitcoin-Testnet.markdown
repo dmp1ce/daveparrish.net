@@ -74,4 +74,4 @@ S17 Antminers are quite powerful at the time of writing, so I could easily solo 
 
 # Conclusion
 
-That was everything I needed to get coins mined on Bitcoin Testnet. I hope you found my write-up helpful and happy hashing! ⛏
+That was everything I needed to get coins mined on Bitcoin Testnet. I hope you found my write-up helpful. Happy hashing! ⛏
