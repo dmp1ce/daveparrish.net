@@ -24,10 +24,10 @@ to follow my work and support me. I also have a [list of other projects](/projec
 
 ## Bitcoin
 
-I exchange my services for bitcoin and I am a local exchanger in the
-Raleigh, North Carolina area. You can often find me at the
+I exchange my services for bitcoin and I am a local meetup organizer near in
+North Carolina area. You can often find me at the
 [Triangle Bitcoin Meetup](http://www.meetup.com/Triangle-Bitcoin-Meetup/) which
-I help organize. If you are interested, my current bitcoin price can be found with [this calculator](https://dmp1ce.github.io/Dave-s-BTC-Price).
+I help organize.
 
 ## Health & Fitness
 
