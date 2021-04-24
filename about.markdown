@@ -24,7 +24,7 @@ to follow my work and support me. I also have a [list of other projects](/projec
 
 ## Bitcoin
 
-I exchange my services for bitcoin and I am a local meetup organizer near in
+I exchange my services for bitcoin and I am a local meetup organizer in the
 North Carolina area. You can often find me at the
 [Triangle Bitcoin Meetup](http://www.meetup.com/Triangle-Bitcoin-Meetup/) which
 I help organize.
