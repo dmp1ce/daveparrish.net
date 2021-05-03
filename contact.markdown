@@ -4,8 +4,9 @@ title: Contact
 
 daveparrish@tutanota.com<br />
 daveparrish@protonmail.ch<br/>
-919-364-9258 on [Signal](https://whispersystems.org/)<br />
-dmp1ce on [Telegram](https://telegram.org/)<br />
+`05ec05eb74f272255d60a95a13ed93d06dfcb95ebc7c0af566b39af0465c614c1f` on [Session](https://getsession.org/)<br />
+`919-364-9258` on [Signal](https://whispersystems.org/)<br />
+`dmp1ce` on [Telegram](https://telegram.org/)<br />
 [GPG key](files/David Parrish.asc)
 
 ### Find Me At
