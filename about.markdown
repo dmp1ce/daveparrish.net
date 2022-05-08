@@ -1,33 +1,13 @@
 ---
 title: About
 ---
-I am a freelance web developer by profession working primarily with
-[UpgradeYa](http://upgradeya.net). I also maintain a bunch of obscure open
-source projects, mostly hosted on [Github](https://github.com/dmp1ce).
+I also maintain a bunch of obscure open source projects.
 
 ## Family
 
 My most important project is my family. I spend as much time as I can with my
 wife and children. I figured out how I could work from home, partly to spend more
 time with my family.
-
-## Free Talk Live
-
-I helped transition [Free Talk Live](http://freetalklive.com) into a Drupal 7
-website and I am one of the current maintainers.
-
-## Open Source
-
-I work on various projects to help me (and hopefully others) use Linux and other
-open source projects. See my [Patreon page](https://www.patreon.com/dmp1ce)
-to follow my work and support me. I also have a [list of other projects](/projects.html) I have worked on.
-
-## Bitcoin
-
-I exchange my services for bitcoin and I am a local meetup organizer in the
-North Carolina area. You can often find me at the
-[Triangle Bitcoin Meetup](http://www.meetup.com/Triangle-Bitcoin-Meetup/) which
-I help organize.
 
 ## Health & Fitness
 
@@ -51,7 +31,6 @@ begin making some decisions in my life which I believe lead me to a more
 sustainable and happy life.
 
 I feel like I owe this change to several online resources and books including
-[Free Talk Live](http://freetalklive.com),
 [Freedomain Radio](http://www.freedomainradio.com/),
 [Complete Liberty](http://completeliberty.com/) and
 [Nathanal Branden's The Six Pillars of Self Esteem](http://www.amazon.com/The-Six-Pillars-Self-Esteem-Definitive/dp/0553374397).
@@ -77,4 +56,3 @@ I'm a linux fanboy. Mostly because I am dedicated to the idea of open source.
 I try to run all my devices on open source software and I try to stay up to
 date on new open source technologies. Right now I am running Arch Linux on my
 laptop. Before that I ran Gentoo, which was quite a learning experience.
-I still use Windows (and a [Steam Link](https://store.steampowered.com/app/353380/Steam_Link/)) for gaming, but I have been happy to see more an more games coming to Linux.

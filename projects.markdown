@@ -2,9 +2,6 @@
 title: Projects
 ---
 
-To support me with my projects and see updates for my more recent projects please visit
-[my Patreon page](https://www.patreon.com/dmp1ce).
-
 ## Savanna Model website
 
 The books by [Geoff Bond](http://www.speakerbond.com/), a nutritional anthropologist, have changed my life. I first read [Deadly Harvest](http://www.naturaleater.com/Deadly-Harvest/Deadly-Harvest-Information.htm) which convinced me to change my diet to a mainly vegetarian, non-grain, diet. Geoff later wrote the book [Paleo in a Nutshell](http://www.naturaleater.com/Paleo-Nutshell/Nutshell-main.htm) which is a more concise book on the same topic as Deadly Harvest. Because my diet was so bad, I didn't know what many of the foods Geoff talks about even looked like! How to prepare the foods was another problem for me. Following [Geoff Bond's shopping list](http://www.naturaleater.com/Support-Materials/Food-listing-traffic-light.pdf) was very helpful to me when modifying my diet.
@@ -14,5 +11,3 @@ From Geoff Bond's work, mainly from his books, I took it upon myself to create a
 While still a work in progress, the website should be useful. Feedback or help contributing is welcome.
 
 - [Visit the SavannaModel.info website](https://savannamodel.info/)
-- [Contribute to or build the SavannaModel.info website with instructions on Github](https://github.com/dmp1ce/savannamodel-hakyll)
-- [Report issues for SavannaModel.info](https://github.com/dmp1ce/savannamodel-website/issues)
