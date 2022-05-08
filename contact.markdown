@@ -2,8 +2,7 @@
 title: Contact
 ---
 
-7893abb6-0c5f-47d5-b307-f7a8f967651e@aleeas.com<br/>
-[GPG key](files/David Parrish.asc)
+<a href="mailto:7893abb6-0c5f-47d5-b307-f7a8f967651e@aleeas.com">Email me</a> and encrypt with my [GPG key](files/David Parrish.asc) for privacy.
 
 ### Find Me At
 * [Keybase.io](https://keybase.io/daveparrish)
