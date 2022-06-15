@@ -16,8 +16,8 @@ For encrypting push and decrypting pull commands I am using [git-remote-gcrypt](
 I had looked at [git-crypt](https://www.agwa.name/projects/git-crypt/) but it seems that git-crypt is better for encrypting a few files while git-remote-gcrypt is better for encrypting the entire repository.
 The only encryption method available for git-remote-gcrypt is [GPG](https://gnupg.org/), which is OK with me, but it would have been nice to have the option for symmetric encryption with a passphrase file.
 
-To install, all I needed to do was `apt install git-remote-gcrypt` on [Debian/Ubuntu](https://www.ubuntu.com/community/debian) but I could also easily install on a [Mac](https://en.wikipedia.org/wiki/MacOS) using the `install.sh` script.
-The install script is only copying a [Git hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks).
+To install, all I needed to do was `apt install git-remote-gcrypt` on [Debian/Ubuntu](https://www.ubuntu.com/community/debian). I could also easily install on a [Mac](https://en.wikipedia.org/wiki/MacOS) using the Homebrew package manager with the command `brew install git-remote-gcrypt`.
+Using a package manager is prefered to help keep the git hook up-to-date.
 
 Once installed, you'll need need to specify the GPG keys to use for encrypting the data.
 First create the remote.
