@@ -5,29 +5,29 @@
 
 packages:
 - completed:
-    hackage: filestore-0.6.3.4@sha256:0b78ba9848f445b05235de57ddfad4f7b5c180651d047b9c8f67f41ff88c50e1,3106
+    hackage: hakyll-4.16.2.0@sha256:d98c0e2ed14ca2483ea52406f9c924e8fe383fd06c4c3b80ca5daf312f36c270,9997
     pantry-tree:
-      size: 984
-      sha256: 3fa1febb2eaf8e6db8df4bf941e511dab45ed5a120e0c056e298fb88a09d6685
+      sha256: 7e353fb6d50611d437c3c355ee5b50cc7b0e2ec805ee6a2deb89068d0840266f
+      size: 9412
   original:
-    hackage: filestore-0.6.3.4
+    hackage: hakyll-4.16.2.0@sha256:d98c0e2ed14ca2483ea52406f9c924e8fe383fd06c4c3b80ca5daf312f36c270,9997
 - completed:
-    hackage: hakyll-filestore-0.1.6@sha256:29913ba96bab6fc7ded801e6fd6cb9e1c678c6994bd7bc7bc73764816babaa49,1163
+    hackage: hakyll-filestore-0.1.11@sha256:2cda281348580e11ac802f748965fea1fee03b77c3e8b98446dcc096e209b949,1160
     pantry-tree:
-      size: 522
-      sha256: 0f4d5c96785ff165a563e8dfcaf3a3f57d7a37da6fe828109243099174e5114e
+      sha256: 50a53bc9766fdee6dab938d6b7fba7a8cff23a5adae9fe835d7f90e2ac3bf757
+      size: 476
   original:
-    hackage: hakyll-filestore-0.1.6
+    hackage: hakyll-filestore-0.1.11@sha256:2cda281348580e11ac802f748965fea1fee03b77c3e8b98446dcc096e209b949,1160
 - completed:
-    hackage: haskell-src-exts-1.21.0@sha256:02421cacaa48c055551b8e5796efc543301b7ea9527a38e1385403d2b85512fb,4467
+    hackage: filestore-0.6.5@sha256:c7926f679e7f31af247f52c13e2060b9d94641180e17a0bed9768a1040c53ded,3247
     pantry-tree:
-      size: 95555
-      sha256: f3842ca5aa0653ba819e68c930b24c35ff9b13d14a73efcc016a3ebe9caa33cf
+      sha256: b1c4c18e2f9c54e59a351349535378645a85c19b70ad578dbb1520e270842cc3
+      size: 927
   original:
-    hackage: haskell-src-exts-1.21.0@sha256:02421cacaa48c055551b8e5796efc543301b7ea9527a38e1385403d2b85512fb
+    hackage: filestore-0.6.5@sha256:c7926f679e7f31af247f52c13e2060b9d94641180e17a0bed9768a1040c53ded,3247
 snapshots:
 - completed:
-    size: 509471
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/12/26.yaml
-    sha256: 95f014df58d0679b1c4a2b7bf2b652b61da8d30de5f571abb0d59015ef678646
-  original: lts-12.26
+    sha256: 428ec8d5ce932190d3cbe266b9eb3c175cd81e984babf876b64019e2cbe4ea68
+    size: 590100
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/18/28.yaml
+  original: lts-18.28

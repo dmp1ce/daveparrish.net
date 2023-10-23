@@ -1,6 +1,5 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import Data.Monoid ((<>))
 import Hakyll
 import Hakyll.FileStore.Git.Context (gitGetItemModificationTime)
 import Data.Time.LocalTime (getCurrentTimeZone, utcToZonedTime)
