@@ -14,13 +14,14 @@ main = hakyllWith myConfiguration $ do
               (const "drupal_archive/"))
     compile copyFileCompiler
 
-  -- Copy over keybase proof
-  match "keybase.txt" $ do
-    route   idRoute
-    compile copyFileCompiler
-
-  -- Copy .htaccess file for redirecting old urls to new
-  match ".htaccess" $ do
+  
+  match (fromList [ -- Copy over keybase proof
+                    "keybase.txt"
+                    -- For github URL name
+                  , "CNAME"
+                    -- Copy .htaccess file for redirecting old urls to new
+                  , ".htaccess"
+                  ]) $ do
     route   idRoute
     compile copyFileCompiler
 
